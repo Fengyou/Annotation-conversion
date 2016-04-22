@@ -4,16 +4,16 @@
 
 typedef enum STATE
 {
-	SUCCESS,	// ³É¹¦
-	FILE_ERROR,	// ÎÄ¼ş´íÎó
-	NO_MATCH,	// ²»Æ¥Åä
-	OTHER,		// ÆäËû´íÎó
+	SUCCESS,	// æˆåŠŸ
+	FILE_ERROR,	// æ–‡ä»¶é”™è¯¯
+	NO_MATCH,	// ä¸åŒ¹é…
+	OTHER,		// å…¶ä»–é”™è¯¯
 }STATE;
 
 typedef enum TAG
 {
-	TAG_BEGIN,		// ÔÚC×¢ÊÍ¶ÎÖĞ
-	TAG_END,		// C×¢ÊÍ½áÊø
+	TAG_BEGIN,		// åœ¨Cæ³¨é‡Šæ®µä¸­
+	TAG_END,		// Cæ³¨é‡Šç»“æŸ
 }TAG;
 
 #pragma warning(disable:4996)
@@ -134,19 +134,19 @@ int main()
 
 	if (ret == SUCCESS)
 	{
-		printf("×ª»»³É¹¦\n");
+		printf("è½¬æ¢æˆåŠŸ\n");
 	}
 	else if (ret == NO_MATCH)
 	{
-		printf("²»Æ¥Åä\n");
+		printf("ä¸åŒ¹é…\n");
 	}
 	else if (ret == FILE_ERROR)
 	{
-		printf("ÎÄ¼ş´íÎó: %d\n", errno);
+		printf("æ–‡ä»¶é”™è¯¯: %d\n", errno);
 	}
 	else
 	{
-		printf("ÆäËû´íÎó: %d\n", errno);
+		printf("å…¶ä»–é”™è¯¯: %d\n", errno);
 	}
 
 	return 0;
